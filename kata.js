@@ -1,31 +1,32 @@
 /*
 Description:
 
-Americans are odd people: in their buildings, the first floor is actually the ground floor and there is no 13th floor ('cause of superstition).
+Americans are odd people: in their buildings, the first floor is actually the
+ground floor and there is no 13th floor ('cause of superstition).
 
-Write a function that given an American floor (passed as an integer) returns the real floor:
+Write a function that given an American floor (passed as an integer) returns the
+real floor:
 
 get_real_floor(1) == 0 # getRealFloor for JS and Coffeescript
 get_real_floor(0) == 0 # Special case to please Europeans
 get_real_floor(5) == 4
 get_real_floor(15) == 13
-Moreover, your function should work for basement floors too: just return the same value than the passed one.
+Moreover, your function should work for basement floors too: just return the
+same value than the passed one.
 
 get_real_floor(-3) == -3
 */
 
 function getRealFloor(n) {
-  if(n > 0 && n < 13){
-      return n - 1
-    } 
-    else if(n === 0 || n < 0){   
-      return n
-    }
-    else if(n > 13){
-      return n -2}
-     else {
-       return null
-     }
+  if (n > 0 && n < 13) {
+    return n - 1;
+  } else if (n <= 0) {
+    return n;
+  } else if (n > 13) {
+    return n - 2;
+  } else {
+    return null;
+  }
 }
 
 
@@ -49,8 +50,8 @@ should return
 */
 
 function findNeedle(haystack) {
-  var position = haystack.indexOf("needle");
-  return "found the needle at position" + " " + position;
+  var position = haystack.indexOf('needle');
+  return 'found the needle at position' + ' ' + position;
 }
 
 
@@ -87,12 +88,7 @@ otherwise 'Hello guest'
 */
 
 function greet (name, owner) {
-  if (name === owner) {
-    return 'Hello boss'
-    }
-    else {
-    return 'Hello guest' 
-    }
+  return (name === owner) ? 'Hello boss' : 'Hello guest';
 }
 
 
@@ -111,7 +107,7 @@ But can you do it in 1 line of code and without any conditionals?
 */
 
 function opposite(number) {
-  return (number * (-1))
+  return (number * (-1));
 }
 
 /*
@@ -131,71 +127,18 @@ The test cases contain numbers only by mistake.
 */
 
 function correct(str){
-  for(var i = 0; i < str.length; i++){
-    if (i === 5){
-      str.replace(i, "S");
-      return str; 
-      } else if (i === 0) {
-          str.replace(i, "O");
-            return str;  
-      } else if (i === 1){
-          str.replace(i, "I");
-            return str;         
-      } else {
-        return "not quite";
-      }
+  for (var i = 0; i < str.length; i++) {
+    if (i === 5) {
+      str.replace(i, 'S');
+      return str;
+    } else if (i === 0) {
+      str.replace(i, 'O');
+      return str;
+    } else if (i === 1) {
+      str.replace(i, 'I');
+      return str;
+    } else {
+      return 'not quite';
+    }
    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
