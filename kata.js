@@ -142,3 +142,33 @@ function correct(str){
     }
    }
 }
+
+
+
+/* LEVEL 7 ! I learned how to use the sorting method to order an array from either ascending or descending value. 
+
+Rick wants a faster way to get the product of the largest pair in an array. Your task is to create a performant solution to find the product of the largest two integers in a unique array of positive numbers.
+All inputs will be valid.
+Passing [2, 6, 3] should return 18, the product of [6, 3].
+
+Disclaimer: Mr. Roll will only accept solutions that are faster than his, which has a running time O(nlogn).
+
+maxProduct([2, 1, 5, 0, 4, 3])              // 20
+maxProduct([7, 8, 9])                       // 72
+maxProduct([33, 231, 454, 11, 9, 99, 57])   // 104874
+
+*/
+
+function maxProduct(numbers) {
+  numbers = numbers.sort(function(a, b) {return b - a;});
+  return ((numbers[0]) * (numbers[1]));
+}
+
+
+
+
+
+
+
+
+
