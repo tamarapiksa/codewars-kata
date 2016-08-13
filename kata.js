@@ -126,7 +126,7 @@ I is misinterpreted as 1
 The test cases contain numbers only by mistake.
 */
 
-function correct(str){
+exports.correct = function correct(str){
   for (var i = 0; i < str.length; i++) {
     if (i === 5) {
       str.replace(i, 'S');
@@ -159,16 +159,18 @@ maxProduct([33, 231, 454, 11, 9, 99, 57])   // 104874
 
 */
 
-function maxProduct(numbers) {
-  numbers = numbers.sort(function(a, b) {return b - a;});
-  return ((numbers[0]) * (numbers[1]));
+exports.maxProduct = function maxProduct(numbers) {
+  let currentMax, lastMax;
+  for (let i = 0, length = numbers.length; i < length; i++) {
+    let current = numbers[i];
+    currentMax = currentMax || current;
+
+    if (current > currentMax) {
+      lastMax = currentMax;
+      currentMax = current;
+    } else if (current > lastMax) {
+      lastMax = current;
+    }
+  }
+  return currentMax * lastMax
 }
-
-
-
-
-
-
-
-
-
