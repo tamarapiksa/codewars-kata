@@ -194,14 +194,11 @@ the two is a valid vampire number.
 http://www.codewars.com/kata/54d418bd099d650fa000032d/train/javascript
 */
 
-var vampire_test = function(a, b){
-  let fangs = [a, b];
-  let product = a * b;
-  if ( fangs.each === product.each ) {
-    return true;
-  } else {
-    return false;
-  }
+exports.vampireNumber = function vampireNumber(a, b){
+  const product = a * b;
+  const sortedProduct = product.toString().split('').sort().join('');
+  const sortedNums = (a.toString() + b.toString()).split('').sort().join('');
+  return sortedProduct.includes(sortedNums);
 }
 
 
