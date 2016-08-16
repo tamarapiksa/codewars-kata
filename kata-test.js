@@ -1,10 +1,38 @@
 const { expect } = require('chai');
 const {
+  getRealFloor,
+  findNeedle,
+  fixTheMeerkat,
   maxProduct,
   vampireNumber
 } = require('./kata');
 
 describe('kata', () => {
+
+  describe('getRealFloor()', () => {
+    it('should return 0 for floor 1', () => {
+      expect(getRealFloor(1) == 0).to.eq(true);
+    });
+
+    it('should return 0 for floor 0', () => {
+      expect(getRealFloor(0) == 0).to.eq(true);
+    });
+
+    it('should return 5 for floor 4', () => {
+      expect(getRealFloor(5) == 4).to.eq(true);
+    });
+
+    it('should return 15 for floor 13', () => {
+      expect(getRealFloor(15) == 13).to.eq(true);
+    });
+  });
+
+  describe('findNeedle()', () => {
+    it('should return "found the needle at position 5"', () => {
+      const result = findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']);
+      expect(result).to.eq('found the needle at position 5');
+    });
+  });
 
   describe('maxProduct()', () => {
 
@@ -25,7 +53,7 @@ describe('kata', () => {
   });
 
 
-  describe('vampireTest', () => {
+  describe('vampireTest()', () => {
 
     it('should return true for a vampire number', () => {
       const result = vampireNumber(6, 21);
