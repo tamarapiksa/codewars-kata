@@ -17,7 +17,7 @@ same value than the passed one.
 get_real_floor(-3) == -3
 */
 
-function getRealFloor(n) {
+exports.getRealFloor = function getRealFloor(n) {
   if (n > 0 && n < 13) {
     return n - 1;
   } else if (n <= 0) {
@@ -49,7 +49,7 @@ should return
 'found the needle at position 5'
 */
 
-function findNeedle(haystack) {
+exports.findNeedle = function findNeedle(haystack) {
   var position = haystack.indexOf('needle');
   return 'found the needle at position' + ' ' + position;
 }
@@ -67,7 +67,7 @@ Same goes for all the other arrays/lists that you will get in the tests: you hav
 */
 
 
-function fixTheMeerkat(arr) {
+exports.fixTheMeerkat = function fixTheMeerkat(arr) {
  arr.reverse();
  return arr;
 }
@@ -87,7 +87,7 @@ name equals owner 'Hello boss'
 otherwise 'Hello guest'
 */
 
-function greet (name, owner) {
+exports.greet = function greet (name, owner) {
   return (name === owner) ? 'Hello boss' : 'Hello guest';
 }
 
@@ -106,7 +106,7 @@ Examples:
 But can you do it in 1 line of code and without any conditionals?
 */
 
-function opposite(number) {
+exports.greet = function opposite(number) {
   return (number * (-1));
 }
 
