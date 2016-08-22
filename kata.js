@@ -106,7 +106,7 @@ Examples:
 But can you do it in 1 line of code and without any conditionals?
 */
 
-exports.greet = function opposite(number) {
+exports.opposite = function opposite(number) {
   return (number * (-1));
 }
 
@@ -303,4 +303,38 @@ function pattern(n) {
  }
 
 
+
+/*
+There's a 3 for 2 offer on mangoes. For a given price and quantity, calculate the total cost of the mangoes.
+
+http://www.codewars.com/kata/price-of-mangoes/train/javascript
+
+*/
+
+function mango(quantity, price){
+  let regPrice = quantity * price;
+  let salePrice = (quantity/3) * price; 
+  if (quantity % 3 === 0) {
+    return regPrice - salePrice;
+  } else {
+    return regPrice;
+  }
+}
+
+/*
+There's a 3 for 2 offer on mangoes. For a given price and quantity, calculate the total cost of the mangoes.
+
+http://www.codewars.com/kata/price-of-mangoes/train/javascript
+
+*/
+
+function mango(quantity, price){
+  let regPrice = quantity * price;
+  let salePrice = (quantity/3) * price; 
+  if (quantity % 3 === 0) {
+    return regPrice - salePrice;
+  } else {
+    return regPrice;
+  }
+}
 

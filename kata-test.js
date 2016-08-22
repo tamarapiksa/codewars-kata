@@ -1,6 +1,7 @@
 const { expect } = require('chai');
 const {
   getRealFloor,
+  greet,
   findNeedle,
   fixTheMeerkat,
   maxProduct,
@@ -31,6 +32,18 @@ describe('kata', () => {
     it('should return "found the needle at position 5"', () => {
       const result = findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']);
       expect(result).to.eq('found the needle at position 5');
+    });
+  });
+
+  describe('greet()', () => {
+    it('should say hello guest when not owner', () => {
+      const result = greet('Tamara', 'Blue');
+      expect(result).to.equal('Hello guest');
+    });
+    
+    it('should say hello boss when equals guest', () => {
+      const result = greet('Tamara', 'Tamara');
+      expect(result).to.equal('Hello boss');
     });
   });
 
