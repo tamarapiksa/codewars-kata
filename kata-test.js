@@ -1,6 +1,7 @@
 const { expect } = require('chai');
 const {
   getRealFloor,
+  greet,
   findNeedle,
   fixTheMeerkat,
   maxProduct,
@@ -31,6 +32,18 @@ describe('kata', () => {
     it('should return "found the needle at position 5"', () => {
       const result = findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']);
       expect(result).to.eq('found the needle at position 5');
+    });
+  });
+
+  describe('greet()', () => {
+    it('should say hello guest when not owner', () => {
+      const result = greet('Tamara', 'Blue');
+      expect(result).to.equal('Hello guest');
+    });
+    
+    it('should say hello boss when equals guest', () => {
+      const result = greet('Tamara', 'Tamara');
+      expect(result).to.equal('Hello boss');
     });
   });
 
@@ -65,6 +78,29 @@ describe('kata', () => {
       expect(result).to.eq(false);
     });
   });
+});
+
+
+  describe('mangoTest()', () => {
+
+    it('should return 6', () => {
+      const result = mango(3, 3);
+      expect(result).to.eq(6);
+    });
+  });
+
+  describe('fizzTest()', () => {
+    
+    it('should return [1,2,3,4,5]', () => {
+      const result = fizz(5);
+      expect(result).to.eq([1,2,3,4,5]);
+    });
+
+    it('should return [1,2,3,4,5,6,7,8,9,10]', () => {
+      const result = fizz(10);
+      const result = fizz([1,2,3,4,5,6,7,8,9,10]);
+    });
+  }); 
 });
 
 
