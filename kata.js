@@ -321,20 +321,28 @@ function mango(quantity, price){
   }
 }
 
-/*
-There's a 3 for 2 offer on mangoes. For a given price and quantity, calculate the total cost of the mangoes.
 
-http://www.codewars.com/kata/price-of-mangoes/train/javascript
+
+/*
+This is the first step to understanding FizzBuzz.
+
+Your inputs: a positive integer, n, greater than or equal to one. n is provided, you have NO CONTROL over its value.
+
+Your expected outputs: an array of positive integers from 1 to n
+
+Your job is to write an algorithm that gets you from the input to the output.
+
+http://www.codewars.com/kata/pre-fizzbuzz-workout-number-1/javascript
 
 */
 
-function mango(quantity, price){
-  let regPrice = quantity * price;
-  let salePrice = (quantity/3) * price; 
-  if (quantity % 3 === 0) {
-    return regPrice - salePrice;
-  } else {
-    return regPrice;
+function fizz(n) {
+  let array = [];
+  for (let i = 1; i <= n; i ++){
+    array.push(i);
   }
+  return array;
 }
+
+
 
