@@ -84,7 +84,7 @@ describe('kata', () => {
   describe('mangoTest()', () => {
 
     it('should return 6', () => {
-      const result = mango(3);
+      const result = mango(3, 3);
       expect(result).to.eq(6);
     });
   });
