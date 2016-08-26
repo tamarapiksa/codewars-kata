@@ -311,7 +311,7 @@ http://www.codewars.com/kata/price-of-mangoes/train/javascript
 
 */
 
-function mango(quantity, price){
+exports.mango = function mango(quantity, price){
   let regPrice = quantity * price;
   let salePrice = (quantity/3) * price; 
   if (quantity % 3 === 0) {
@@ -335,8 +335,7 @@ Your job is to write an algorithm that gets you from the input to the output.
 http://www.codewars.com/kata/pre-fizzbuzz-workout-number-1/javascript
 
 */
-
-function fizz(n) {
+exports.fizz = function fizz(n) {
   let array = [];
   for (let i = 1; i <= n; i ++){
     array.push(i);

@@ -5,7 +5,9 @@ const {
   findNeedle,
   fixTheMeerkat,
   maxProduct,
-  vampireNumber
+  vampireNumber,
+  fizz,
+  mango
 } = require('./kata');
 
 describe('kata', () => {
@@ -78,8 +80,6 @@ describe('kata', () => {
       expect(result).to.eq(false);
     });
   });
-});
-
 
   describe('mangoTest()', () => {
 
@@ -90,17 +90,16 @@ describe('kata', () => {
   });
 
   describe('fizzTest()', () => {
-    
     it('should return [1,2,3,4,5]', () => {
       const result = fizz(5);
-      expect(result).to.eq([1,2,3,4,5]);
+      expect(result).to.eql([1,2,3,4,5]);
     });
 
     it('should return [1,2,3,4,5,6,7,8,9,10]', () => {
       const result = fizz(10);
-      const result = fizz([1,2,3,4,5,6,7,8,9,10]);
+      expect(result).to.eql([1,2,3,4,5,6,7,8,9,10]);
     });
-  }); 
+  });
 });
 
 
